@@ -12,5 +12,4 @@
 
 #### 🔨 Work On:
 
-<!--START_SECTION:waka-->
-<!--END_SECTION:waka-->
+<img height="250em" src="https://github-readme-stats.vercel.app/api/wakatime?username=MuradyanArtem&theme=dracula&hide_border=true" />
