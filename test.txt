@@ -1,0 +1,13 @@
+BGP multipath allows you to install multiple internal BGP paths and multiple external BGP paths to the forwarding table. Selecting multiple paths enables BGP to load-balance traffic across multiple links.
+
+A path is considered a BGP equal-cost path (and is used for forwarding) if the BGP path selection process performs a tie-break after comparing the IGP cost to the next-hop. By default, all paths with the same neighboring AS, learned by a multipath-enabled BGP neighbor are considered in the multipath selection process.
+
+BGP typically selects only one best path for each prefix and installs that route in the forwarding table. When BGP multipath is enabled, the device selects multiple equal-cost BGP paths to reach a given destination, and all these paths are installed in the forwarding table. BGP advertises only the active path to its neighbors, unless add-path is in use.
+
+The Junos OS BGP multipath feature supports the following applications:
+
+Load balancing across multiple links between two routing devices belonging to different autonomous systems (ASs)
+Load balancing across a common subnet or multiple subnets to different routing devices belonging to the same peer AS
+Load balancing across multiple links between two routing devices belonging to different external confederation peers
+Load balancing across a common subnet or multiple subnets to different routing devices belonging to external confederation peers
+In a common scenario for load balancing, a customer is multihomed to multiple routers or switches in a point of presence (POP). The default behavior is to send all traffic across only one of the available links. Load balancing causes traffic to use two or more of the links.
